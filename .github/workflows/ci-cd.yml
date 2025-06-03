@@ -48,6 +48,7 @@ jobs:
           sed -i "s|^\(\s*name: s4g0/streamlit\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
 
 
+
       - name: Commit and push changes
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
