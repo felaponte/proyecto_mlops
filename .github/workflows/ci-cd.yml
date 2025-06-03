@@ -43,9 +43,10 @@ jobs:
 
       - name: Update Kustomization image tags
         run: |
-          sed -i "s|name: s4g0/mlflow-service.*|name: s4g0/mlflow-service\n    newTag: ${{ env.TAG }}|" ./komposefiles/kustomization.yaml
-          sed -i "s|name: s4g0/api-service.*|name: s4g0/api-service\n    newTag: ${{ env.TAG }}|" ./komposefiles/kustomization.yaml
-          sed -i "s|name: s4g0/streamlit.*|name: s4g0/streamlit\n    newTag: ${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|^\(\s*name: s4g0/mlflow-service\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|^\(\s*name: s4g0/api-service\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|^\(\s*name: s4g0/streamlit\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+
 
       - name: Commit and push changes
         env:
