@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-hostPath.yaml -o komposefiles/ --volumes hostPath
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mlflow-service
+  name: mlflow-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mlflow-service
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-hostPath.yaml -o komposefiles/ --volumes hostPath
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: mlflow-service
+    spec:
+      containers:
+        - args:
+            - mlflow
+            - server
+            - --backend-store-uri
+            - mysql+pymysql://user:password@db-metadata-mlflow:3306/db
+            - --default-artifact-root
+            - s3://mlflows3/artifacts
+            - --host
+            - 0.0.0.0
+            - --serve-artifacts
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              value: admin
+            - name: AWS_SECRET_ACCESS_KEY
+              value: supersecret
+            - name: MLFLOW_S3_ENDPOINT_URL
+              value: http://minio:9000
+          image: s4g0/mlflow-service
+          name: mlflow-service
+          ports:
+            - containerPort: 5000
+          resources: {}
+      restartPolicy: Always
+status: {}

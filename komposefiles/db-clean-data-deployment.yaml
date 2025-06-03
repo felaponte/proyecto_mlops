@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-pvc.yaml -o komposefiles/ --volumes persistentVolumeClaim
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: db-clean-data
+  name: db-clean-data
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: db-clean-data
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-pvc.yaml -o komposefiles/ --volumes persistentVolumeClaim
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: db-clean-data
+    spec:
+      containers:
+        - env:
+            - name: MYSQL_DATABASE
+              value: db
+            - name: MYSQL_PASSWORD
+              value: password
+            - name: MYSQL_ROOT_PASSWORD
+              value: password
+            - name: MYSQL_USER
+              value: user
+          image: mysql:latest
+          name: db-clean-data
+          ports:
+            - containerPort: 3308
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: my-db-clean
+      restartPolicy: Always
+      volumes:
+        - name: my-db-clean
+          persistentVolumeClaim:
+            claimName: my-db-clean
+status: {}

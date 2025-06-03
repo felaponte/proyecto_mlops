@@ -1,0 +1,14 @@
+[2025-06-03T00:05:55.778+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Pipeline-proyecto-final.reload_model manual__2025-06-03T00:04:10.628349+00:00 [queued]>
+[2025-06-03T00:05:55.796+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Pipeline-proyecto-final.reload_model manual__2025-06-03T00:04:10.628349+00:00 [queued]>
+[2025-06-03T00:05:55.796+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2025-06-03T00:05:55.815+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): reload_model> on 2025-06-03 00:04:10.628349+00:00
+[2025-06-03T00:05:55.834+0000] {standard_task_runner.py:57} INFO - Started process 673 to run task
+[2025-06-03T00:05:55.842+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Pipeline-proyecto-final', 'reload_model', 'manual__2025-06-03T00:04:10.628349+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/dag-proyecto-final.py', '--cfg-path', '/tmp/tmpjf_rk707']
+[2025-06-03T00:05:55.848+0000] {standard_task_runner.py:85} INFO - Job 103: Subtask reload_model
+[2025-06-03T00:05:55.951+0000] {task_command.py:410} INFO - Running <TaskInstance: Pipeline-proyecto-final.reload_model manual__2025-06-03T00:04:10.628349+00:00 [running]> on host fe73afd4d10b
+[2025-06-03T00:05:56.150+0000] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Pipeline-proyecto-final' AIRFLOW_CTX_TASK_ID='reload_model' AIRFLOW_CTX_EXECUTION_DATE='2025-06-03T00:04:10.628349+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-03T00:04:10.628349+00:00'
+[2025-06-03T00:05:56.471+0000] {logging_mixin.py:149} INFO - ✅ Recarga exitosa: {'message': "✔ Modelo 'Regresion_Lineal_modelo_produccion' recargado exitosamente."}
+[2025-06-03T00:05:56.472+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-06-03T00:05:56.492+0000] {taskinstance.py:1368} INFO - Marking task as SUCCESS. dag_id=Pipeline-proyecto-final, task_id=reload_model, execution_date=20250603T000410, start_date=20250603T000555, end_date=20250603T000556
+[2025-06-03T00:05:56.538+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2025-06-03T00:05:56.592+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

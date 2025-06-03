@@ -1,0 +1,125 @@
+[2025-03-28T08:25:25.313+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Pipeline-proyecto2.training_with_gradient_boosting_model manual__2025-03-28T08:24:10.972616+00:00 [queued]>
+[2025-03-28T08:25:25.322+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Pipeline-proyecto2.training_with_gradient_boosting_model manual__2025-03-28T08:24:10.972616+00:00 [queued]>
+[2025-03-28T08:25:25.322+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2025-03-28T08:25:25.333+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): training_with_gradient_boosting_model> on 2025-03-28 08:24:10.972616+00:00
+[2025-03-28T08:25:25.346+0000] {standard_task_runner.py:57} INFO - Started process 142 to run task
+[2025-03-28T08:25:25.349+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Pipeline-proyecto2', 'training_with_gradient_boosting_model', 'manual__2025-03-28T08:24:10.972616+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/dag-proyecto2.py', '--cfg-path', '/tmp/tmp7i9l7lis']
+[2025-03-28T08:25:25.352+0000] {standard_task_runner.py:85} INFO - Job 95: Subtask training_with_gradient_boosting_model
+[2025-03-28T08:25:25.400+0000] {task_command.py:410} INFO - Running <TaskInstance: Pipeline-proyecto2.training_with_gradient_boosting_model manual__2025-03-28T08:24:10.972616+00:00 [running]> on host 0271da744f15
+[2025-03-28T08:25:25.486+0000] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Pipeline-proyecto2' AIRFLOW_CTX_TASK_ID='training_with_gradient_boosting_model' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T08:24:10.972616+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-28T08:24:10.972616+00:00'
+[2025-03-28T08:25:28.514+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:25:28 INFO mlflow.tracking.fluent: Autologging successfully enabled for sklearn.
+[2025-03-28T08:25:28.573+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:25:28 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-03-28T08:25:29.334+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/joblib/parallel.py:1359: UserWarning: Loky-backed parallel loops cannot be called in a multiprocessing, setting n_jobs=1
+  n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+
+[2025-03-28T08:25:29.353+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:25:45.359+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:26:01.172+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:26:16.911+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:26:31.558+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:26:46.347+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:27:03.838+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:27:22.073+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:27:39.963+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:27:57.729+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:28:14.535+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:28:43.962+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:29:14.236+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:29:44.312+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:30:14.061+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:30:43.962+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:31:19.420+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:31:53.404+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:32:27.435+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:33:01.682+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:33:36.016+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:33:54.612+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:34:12.754+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:34:31.262+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:34:49.721+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:35:08.036+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:35:30.087+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:35:52.339+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:36:14.445+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:36:36.436+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:36:58.310+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:37:35.171+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+

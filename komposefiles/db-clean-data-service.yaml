@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-pvc.yaml -o komposefiles/ --volumes persistentVolumeClaim
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: db-clean-data
+  name: db-clean-data
+spec:
+  ports:
+    - name: "3308"
+      port: 3308
+      targetPort: 3306
+  selector:
+    io.kompose.service: db-clean-data
+status:
+  loadBalancer: {}

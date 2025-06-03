@@ -1,0 +1,70 @@
+[2025-03-30T00:16:31.767+0000] {processor.py:156} INFO - Started process (PID=31) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:16:31.768+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:16:31.769+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:16:31.769+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:16:34.620+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:16:34.689+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:16:34.689+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:16:34.709+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:16:34.709+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:16:34.734+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 2.969 seconds
+[2025-03-30T00:17:04.923+0000] {processor.py:156} INFO - Started process (PID=76) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:17:04.928+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:17:04.929+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:17:04.929+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:17:06.370+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:17:06.396+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:17:06.395+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:17:06.417+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:17:06.417+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:17:06.436+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.516 seconds
+[2025-03-30T00:17:36.612+0000] {processor.py:156} INFO - Started process (PID=114) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:17:36.613+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:17:36.614+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:17:36.614+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:17:37.758+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:17:37.780+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:17:37.779+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:17:37.798+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:17:37.798+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:17:37.814+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.206 seconds
+[2025-03-30T00:18:07.985+0000] {processor.py:156} INFO - Started process (PID=153) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:18:07.987+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:18:07.987+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:18:07.987+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:18:09.308+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:18:09.331+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:18:09.331+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:18:09.351+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:18:09.350+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:18:09.365+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.386 seconds
+[2025-03-30T00:18:39.533+0000] {processor.py:156} INFO - Started process (PID=192) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:18:39.538+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:18:39.540+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:18:39.539+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:18:40.929+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:18:40.954+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:18:40.953+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:18:40.975+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:18:40.975+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:18:40.994+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.464 seconds
+[2025-03-30T00:19:11.163+0000] {processor.py:156} INFO - Started process (PID=231) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:19:11.168+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:19:11.169+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:19:11.169+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:19:12.623+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:19:12.648+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:19:12.648+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:19:12.669+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:19:12.669+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:19:12.691+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.531 seconds
+[2025-03-30T00:19:42.843+0000] {processor.py:156} INFO - Started process (PID=270) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:19:42.848+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:19:42.849+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:19:42.849+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:19:44.157+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:19:44.183+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:19:44.182+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:19:44.206+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:19:44.205+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:19:44.225+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.385 seconds
+[2025-03-30T00:20:14.386+0000] {processor.py:156} INFO - Started process (PID=309) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:20:14.387+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:20:14.388+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:20:14.388+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:20:15.766+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:20:15.786+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:20:15.786+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:20:15.805+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:20:15.805+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:20:15.822+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.440 seconds
+[2025-03-30T00:20:45.983+0000] {processor.py:156} INFO - Started process (PID=348) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:20:45.988+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:20:45.989+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:20:45.989+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:20:47.341+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:20:47.367+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:20:47.366+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:20:47.387+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:20:47.387+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:20:47.406+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.426 seconds
+[2025-03-30T00:21:24.524+0000] {processor.py:156} INFO - Started process (PID=30) to work on /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:21:24.525+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/dag-proyecto2.py for tasks to queue
+[2025-03-30T00:21:24.526+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:21:24.526+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:21:25.918+0000] {processor.py:809} INFO - DAG(s) dict_keys(['Pipeline-proyecto2']) retrieved from /opt/airflow/dags/dag-proyecto2.py
+[2025-03-30T00:21:25.985+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:21:25.985+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-03-30T00:21:26.005+0000] {logging_mixin.py:149} INFO - [2025-03-30T00:21:26.005+0000] {dag.py:3486} INFO - Setting next_dagrun for Pipeline-proyecto2 to None, run_after=None
+[2025-03-30T00:21:26.026+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/dag-proyecto2.py took 1.504 seconds

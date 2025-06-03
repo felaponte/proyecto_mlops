@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard-api
+  labels:
+    grafana_dashboard: "1"
+data:
+  api-dashboard.json: |
+    {
+      "uid": "ping-api-latency",
+      "title": "Latency Dashboard",
+      "panels": [
+        {
+          "type": "timeseries",
+          "title": "Predicción - Latencia (segundos)",
+          "targets": [
+            {
+              "expr": "predict_latency_seconds_bucket",
+              "refId": "A"
+            }
+          ],
+          "datasource": "Prometheus",
+          "gridPos": { "x": 0, "y": 0, "w": 24, "h": 10 }
+        }
+      ],
+      "time": {
+        "from": "now-5m",
+        "to": "now"
+      },
+      "schemaVersion": 41,
+      "version": 1
+    }

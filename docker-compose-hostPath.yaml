@@ -1,0 +1,107 @@
+version: '3.8'
+
+services:
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  minio:
+    image: quay.io/minio/minio:latest
+    container_name: Minio
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=supersecret
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - ./minio:/data
+    restart: unless-stopped
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  mlflow-service:
+    image: s4g0/proyecto_kubernetes:mlflow_service
+    #build: ./mlflow
+    restart: always
+    container_name: mlflow-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db-metadata-mlflow
+      - minio
+    environment:
+      MLFLOW_S3_ENDPOINT_URL: http://minio:9000
+      AWS_ACCESS_KEY_ID: admin
+      AWS_SECRET_ACCESS_KEY: supersecret
+    command:
+      - mlflow
+      - server
+      - --backend-store-uri
+      - mysql+pymysql://user:password@db-metadata-mlflow:3306/db
+      - --default-artifact-root
+      - s3://mlflows3/artifacts
+      - --host
+      - 0.0.0.0
+      - --serve-artifacts
+    
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------       
+  ml-service:
+    image: s4g0/proyecto_kubernetes:ml_service
+    #build: ./jupyter-nb
+    container_name: ml-service
+    ports:
+      - "8888:8888"
+    volumes:
+      - './jupyter-nb/files:/ml_project/files'
+    # Run Jupyter Notebook when the container launches
+    command: ["uv","run","jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root"]     
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------       
+  api-service:
+    image: s4g0/proyecto_kubernetes:inferences 
+    #build: ./api-inference
+    container_name: api-service
+    ports:
+      - "8989:8989"
+    # Comando para ejecutar la API con Uvicorn
+    command: ["uv","run","uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8989"] 
+    
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  locust:
+    image: s4g0/proyecto_kubernetes:locust
+    #build:
+    #  context: ./locust
+    #  dockerfile: Dockerfile.locust
+    container_name: locust
+    ports:
+      - "8089:8089"
+    depends_on:
+      - api-service
+    environment:
+      - LOCUST_HOST=http://api-service:8989
+            
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin   
+    
+
+#------------------------------------------------------------------------------------------------------->
+  streamlit-app:
+    image: s4g0/proyecto_kubernetes:streamlit
+    #build: ./streamlit
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api-service
+    restart: always

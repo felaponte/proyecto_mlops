@@ -1,0 +1,14 @@
+[2025-03-28T08:13:49.481+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Pipeline-proyecto2.load_transformed_data manual__2025-03-28T08:12:42.657933+00:00 [queued]>
+[2025-03-28T08:13:49.489+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Pipeline-proyecto2.load_transformed_data manual__2025-03-28T08:12:42.657933+00:00 [queued]>
+[2025-03-28T08:13:49.489+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2025-03-28T08:13:49.500+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): load_transformed_data> on 2025-03-28 08:12:42.657933+00:00
+[2025-03-28T08:13:49.511+0000] {standard_task_runner.py:57} INFO - Started process 166 to run task
+[2025-03-28T08:13:49.515+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Pipeline-proyecto2', 'load_transformed_data', 'manual__2025-03-28T08:12:42.657933+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/dag-proyecto2.py', '--cfg-path', '/tmp/tmpsho3l_1m']
+[2025-03-28T08:13:49.518+0000] {standard_task_runner.py:85} INFO - Job 85: Subtask load_transformed_data
+[2025-03-28T08:13:49.564+0000] {task_command.py:410} INFO - Running <TaskInstance: Pipeline-proyecto2.load_transformed_data manual__2025-03-28T08:12:42.657933+00:00 [running]> on host b458a3543bd2
+[2025-03-28T08:13:49.639+0000] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Pipeline-proyecto2' AIRFLOW_CTX_TASK_ID='load_transformed_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T08:12:42.657933+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-28T08:12:42.657933+00:00'
+[2025-03-28T08:13:54.718+0000] {logging_mixin.py:149} INFO - Preprocesamiento completo. Tablas 'train_data' y 'test_data' creadas en MySQL.
+[2025-03-28T08:13:54.760+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-03-28T08:13:54.769+0000] {taskinstance.py:1368} INFO - Marking task as SUCCESS. dag_id=Pipeline-proyecto2, task_id=load_transformed_data, execution_date=20250328T081242, start_date=20250328T081349, end_date=20250328T081354
+[2025-03-28T08:13:54.817+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2025-03-28T08:13:54.840+0000] {taskinstance.py:2674} INFO - 3 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,16 @@
+[2025-06-02T21:54:24.597+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: restart_data_pipeline.restart_data manual__2025-06-02T21:54:23.059811+00:00 [queued]>
+[2025-06-02T21:54:24.626+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: restart_data_pipeline.restart_data manual__2025-06-02T21:54:23.059811+00:00 [queued]>
+[2025-06-02T21:54:24.626+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2025-06-02T21:54:24.686+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): restart_data> on 2025-06-02 21:54:23.059811+00:00
+[2025-06-02T21:54:24.718+0000] {standard_task_runner.py:57} INFO - Started process 154 to run task
+[2025-06-02T21:54:24.747+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'restart_data_pipeline', 'restart_data', 'manual__2025-06-02T21:54:23.059811+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/restart_dag.py', '--cfg-path', '/tmp/tmpqa_x0lbu']
+[2025-06-02T21:54:24.759+0000] {standard_task_runner.py:85} INFO - Job 63: Subtask restart_data
+[2025-06-02T21:54:25.252+0000] {task_command.py:410} INFO - Running <TaskInstance: restart_data_pipeline.restart_data manual__2025-06-02T21:54:23.059811+00:00 [running]> on host 1aa9775b6819
+[2025-06-02T21:54:26.251+0000] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='restart_data_pipeline' AIRFLOW_CTX_TASK_ID='restart_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-02T21:54:23.059811+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-02T21:54:23.059811+00:00'
+[2025-06-02T21:54:26.801+0000] {logging_mixin.py:149} INFO - ¡Todas las tablas de raw han sido eliminadas!
+[2025-06-02T21:54:27.505+0000] {logging_mixin.py:149} INFO - ¡Todas las tablas de clean han sido eliminadas!
+[2025-06-02T21:54:27.534+0000] {logging_mixin.py:149} INFO - Se reinicia data
+[2025-06-02T21:54:27.535+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-06-02T21:54:27.579+0000] {taskinstance.py:1368} INFO - Marking task as SUCCESS. dag_id=restart_data_pipeline, task_id=restart_data, execution_date=20250602T215423, start_date=20250602T215424, end_date=20250602T215427
+[2025-06-02T21:54:27.710+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2025-06-02T21:54:27.805+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

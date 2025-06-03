@@ -1,0 +1,40 @@
+[2025-03-28T08:56:00.844+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Pipeline-proyecto2.training_modelos_de_prueba manual__2025-03-28T08:54:46.366382+00:00 [queued]>
+[2025-03-28T08:56:00.854+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Pipeline-proyecto2.training_modelos_de_prueba manual__2025-03-28T08:54:46.366382+00:00 [queued]>
+[2025-03-28T08:56:00.854+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2025-03-28T08:56:00.866+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): training_modelos_de_prueba> on 2025-03-28 08:54:46.366382+00:00
+[2025-03-28T08:56:00.877+0000] {standard_task_runner.py:57} INFO - Started process 121 to run task
+[2025-03-28T08:56:00.881+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Pipeline-proyecto2', 'training_modelos_de_prueba', 'manual__2025-03-28T08:54:46.366382+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/dag-proyecto2.py', '--cfg-path', '/tmp/tmpudr5vgsh']
+[2025-03-28T08:56:00.883+0000] {standard_task_runner.py:85} INFO - Job 111: Subtask training_modelos_de_prueba
+[2025-03-28T08:56:00.931+0000] {task_command.py:410} INFO - Running <TaskInstance: Pipeline-proyecto2.training_modelos_de_prueba manual__2025-03-28T08:54:46.366382+00:00 [running]> on host 43c9e353265c
+[2025-03-28T08:56:01.008+0000] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Pipeline-proyecto2' AIRFLOW_CTX_TASK_ID='training_modelos_de_prueba' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T08:54:46.366382+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-28T08:54:46.366382+00:00'
+[2025-03-28T08:56:04.066+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:04 INFO mlflow.tracking.fluent: Autologging successfully enabled for sklearn.
+[2025-03-28T08:56:04.128+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:04 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-03-28T08:56:04.195+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:04 WARNING mlflow.utils.autologging_utils: MLflow autologging encountered a warning: "/home/***/.local/lib/python3.9/site-packages/mlflow/utils/autologging_utils/safety.py:532: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples,), for example using ravel()."
+[2025-03-28T08:56:12.188+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:12 WARNING mlflow.sklearn.utils: roc_auc_score failed. The metric training_roc_auc will not be recorded. Metric error: too many indices for array: array is 2-dimensional, but 3 were indexed
+[2025-03-28T08:56:12.668+0000] {font_manager.py:1584} INFO - generated new fontManager
+[2025-03-28T08:56:13.868+0000] {credentials.py:1123} INFO - Found credentials in environment variables.
+[2025-03-28T08:56:17.941+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:17 WARNING mlflow.utils.autologging_utils: MLflow autologging encountered a warning: "/home/***/.local/lib/python3.9/site-packages/_distutils_hack/__init__.py:33: UserWarning: Setuptools is replacing distutils."
+[2025-03-28T08:56:18.428+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:18 INFO mlflow.tracking.fluent: Autologging successfully enabled for sklearn.
+[2025-03-28T08:56:18.463+0000] {logging_and_warnings.py:72} WARNING - /home/***/.local/lib/python3.9/site-packages/sklearn/ensemble/_gb.py:437: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-28T08:56:42.277+0000] {logging_mixin.py:149} WARNING - 2025/03/28 08:56:42 WARNING mlflow.sklearn.utils: roc_auc_score failed. The metric training_roc_auc will not be recorded. Metric error: too many indices for array: array is 2-dimensional, but 3 were indexed
+[2025-03-28T08:56:45.596+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-03-28T08:56:45.609+0000] {taskinstance.py:1368} INFO - Marking task as SUCCESS. dag_id=Pipeline-proyecto2, task_id=training_modelos_de_prueba, execution_date=20250328T085446, start_date=20250328T085600, end_date=20250328T085645
+[2025-03-28T08:56:45.667+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2025-03-28T08:56:45.683+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

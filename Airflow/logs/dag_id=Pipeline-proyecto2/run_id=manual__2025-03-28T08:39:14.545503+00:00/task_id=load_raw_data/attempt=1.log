@@ -1,0 +1,33 @@
+[2025-03-28T08:39:19.785+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Pipeline-proyecto2.load_raw_data manual__2025-03-28T08:39:14.545503+00:00 [queued]>
+[2025-03-28T08:39:19.793+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Pipeline-proyecto2.load_raw_data manual__2025-03-28T08:39:14.545503+00:00 [queued]>
+[2025-03-28T08:39:19.793+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2025-03-28T08:39:19.803+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): load_raw_data> on 2025-03-28 08:39:14.545503+00:00
+[2025-03-28T08:39:19.814+0000] {standard_task_runner.py:57} INFO - Started process 96 to run task
+[2025-03-28T08:39:19.819+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Pipeline-proyecto2', 'load_raw_data', 'manual__2025-03-28T08:39:14.545503+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/dag-proyecto2.py', '--cfg-path', '/tmp/tmp47aopwy5']
+[2025-03-28T08:39:19.822+0000] {standard_task_runner.py:85} INFO - Job 100: Subtask load_raw_data
+[2025-03-28T08:39:19.865+0000] {task_command.py:410} INFO - Running <TaskInstance: Pipeline-proyecto2.load_raw_data manual__2025-03-28T08:39:14.545503+00:00 [running]> on host 264ebbec6e80
+[2025-03-28T08:39:19.939+0000] {taskinstance.py:1568} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Pipeline-proyecto2' AIRFLOW_CTX_TASK_ID='load_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-28T08:39:14.545503+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-28T08:39:14.545503+00:00'
+[2025-03-28T08:39:20.089+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 1
+[2025-03-28T08:39:23.241+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:39:26.387+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 2
+[2025-03-28T08:39:29.727+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:39:32.877+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 3
+[2025-03-28T08:39:36.032+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:39:39.185+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 4
+[2025-03-28T08:39:42.341+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:39:45.488+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 5
+[2025-03-28T08:39:48.651+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:39:51.798+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 6
+[2025-03-28T08:39:54.955+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:39:58.099+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 7
+[2025-03-28T08:40:01.265+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:40:04.408+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 8
+[2025-03-28T08:40:07.630+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:40:10.778+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 9
+[2025-03-28T08:40:13.948+0000] {logging_mixin.py:149} INFO - Batch repetido. No se añaden datos
+[2025-03-28T08:40:17.096+0000] {logging_mixin.py:149} INFO - Añadiendo datos batch 10
+[2025-03-28T08:40:17.125+0000] {logging_mixin.py:149} INFO - Todos los datos han sido guardados
+[2025-03-28T08:40:19.941+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-03-28T08:40:19.950+0000] {taskinstance.py:1368} INFO - Marking task as SUCCESS. dag_id=Pipeline-proyecto2, task_id=load_raw_data, execution_date=20250328T083914, start_date=20250328T083919, end_date=20250328T084019
+[2025-03-28T08:40:20.003+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2025-03-28T08:40:20.026+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

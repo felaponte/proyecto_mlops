@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-hostPath.yaml -o komposefiles/ --volumes hostPath
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: streamlit-app
+  name: streamlit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: streamlit-app
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose-hostPath.yaml -o komposefiles/ --volumes hostPath
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: streamlit-app
+    spec:
+      containers:
+        - image: s4g0/streamlit
+          name: streamlit-app
+          ports:
+            - containerPort: 8501
+          resources: {}
+      restartPolicy: Always
+status: {}
