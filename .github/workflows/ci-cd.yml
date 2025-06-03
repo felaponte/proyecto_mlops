@@ -1,0 +1,58 @@
+name: CI/CD Proyecto Pipeline
+
+on:
+  push:
+    tags:
+      - 'v*'  # Detecta push de versiones tipo v1, v2, v3...
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Extract tag
+        id: extract_tag
+        run: echo "TAG=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: Build and push mlflow-service image
+        run: |
+          docker build -t s4g0/mlflow-service:${{ env.TAG }} ./mlflow
+          docker push s4g0/mlflow-service:${{ env.TAG }}
+
+      - name: Build and push api-service image
+        run: |
+          docker build -t s4g0/api-service:${{ env.TAG }} ./api-inference
+          docker push s4g0/api-service:${{ env.TAG }}
+
+      - name: Build and push streamlit image
+        run: |
+          docker build -t s4g0/streamlit:${{ env.TAG }} ./streamlit
+          docker push s4g0/streamlit:${{ env.TAG }}
+
+      - name: Update Kustomization image tags
+        run: |
+          sed -i "s|name: s4g0/mlflow-service.*|name: s4g0/mlflow-service\n    newTag: ${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|name: s4g0/api-service.*|name: s4g0/api-service\n    newTag: ${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|name: s4g0/streamlit.*|name: s4g0/streamlit\n    newTag: ${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+
+      - name: Commit and push changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add ./komposefiles/kustomization.yaml
+          git commit -m "Update image tags to ${{ env.TAG }}"
+          git push https://x-access-token:${GH_PAT}@github.com/felaponte/proyecto_mlops.git HEAD:main 
