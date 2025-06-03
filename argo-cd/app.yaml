@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlops-proyecto-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/felaponte/MLOps2'
+    targetRevision: main
+    path: ./komposefiles
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
+
