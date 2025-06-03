@@ -43,11 +43,12 @@ jobs:
 
       - name: Update Kustomization image tags
         run: |
-          sed -i "s|^\(\s*name: s4g0/mlflow-service\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
-          sed -i "s|^\(\s*name: s4g0/api-service\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
-          sed -i "s|^\(\s*name: s4g0/streamlit\s*\n\s*newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|\(name: s4g0/mlflow-service.*\n *newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|\(name: s4g0/api-service.*\n *newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
+          sed -i "s|\(name: s4g0/streamlit.*\n *newTag: \).*|\1${{ env.TAG }}|" ./komposefiles/kustomization.yaml
 
-
+      - name: Mostrar contenido actualizado
+        run: cat ./komposefiles/kustomization.yaml
 
       - name: Commit and push changes
         env:
@@ -57,4 +58,4 @@ jobs:
           git config user.email "actions@github.com"
           git add ./komposefiles/kustomization.yaml
           git commit -m "Update image tags to ${{ env.TAG }}"
-          git push https://x-access-token:${GH_PAT}@github.com/felaponte/proyecto_mlops.git HEAD:main 
+          git push https://x-access-token:${GH_PAT}@github.com/felaponte/MLOps2.git HEAD:main
