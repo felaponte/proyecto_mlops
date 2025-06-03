@@ -60,4 +60,4 @@ jobs:
           git config user.email "actions@github.com"
           git add ./komposefiles/kustomization.yaml
           git commit -m "Update image tags to ${{ env.TAG }}" || echo "No changes to commit"
-          git push https://x-access-token:${GH_PAT}@github.com/felaponte/MLOps2.git HEAD:main
+          git push https://x-access-token:${GH_PAT}@github.com/felaponte/proyecto_mlops.git HEAD:main
